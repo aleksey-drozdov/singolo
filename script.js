@@ -1,3 +1,5 @@
+
+//работа функций только после полной загрузки странцы. 
 window.addEventListener('load', () => {
-    console.log('ok')
+
 })
