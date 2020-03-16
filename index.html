@@ -16,37 +16,72 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#">HOME</a></li>
-          <li><a href="#">SERVICES</a></li>
-          <li><a href="#">PORTFOLIO</a></li>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">CONTACT</a></li>
+          <li><a class="active-link" href="#slider">HOME</a></li>
+          <li><a href="#services">SERVICES</a></li>
+          <li><a href="#portfolio">PORTFOLIO</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#quote">CONTACT</a></li>
         </ul>
       </nav>
     </section>
   </header>
+
+  <a id="slider"></a>
   <section class="slider">
+
     <div class="slider-content container">
-      <img class="arrowBack" src="assets/img/chevPrew.png" alt="arrow back" />
-      <div class="phone-box-vertical">
-        <div class="phone phone-vertical">
-          <img src="assets/img/Cam.png" alt="cam" />
-          <img src="assets/img/Speaker.png" alt="Speaker" />
-          <img src="assets/img/Screen.png" alt="Screen" />
-          <img src="assets/img/Home-Button.png" alt="Home-Button" />
+
+      <img class="arrowBack slider-arrow" src="assets/img/chevPrew.png" alt="arrow back" />
+
+      <div class="slides">
+
+        <div class="slide active-slide" data-bgColor="#f06c64" style="justify-content: space-between;">
+          <div class="phone-box-vertical">
+            <div class="phone phone-vertical">
+              <div>
+                <img src="assets/img/Cam.png" alt="cam" />
+              </div>
+              <div>
+                <img src="assets/img/Speaker.png" alt="Speaker" />
+              </div>
+              <div class="phone-screen">
+                <img src="assets/img/Screen.png" alt="Screen" />
+              </div>
+              <div class="phone-btn">
+                <img src="assets/img/Home-Button.png" alt="Home-Button" />
+              </div>
+            </div>
+          </div>
+
+          <div class="phone-box-horizontal">
+            <div class="phone phone-horizontal">
+              <div>
+                <img src="assets/img/Cam.png" alt="cam" />
+              </div>
+              <div>
+                <img src="assets/img/SpeakerH.png" alt="Speaker" />
+              </div>
+              <div class="phone-screen">
+                <img src="assets/img/Layer 5.png" alt="Screen" />
+              </div>
+              <div class="phone-btn">
+                <img src="assets/img/Home-Button.png" alt="Home-Button" />
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="phone-box-horizontal">
-        <div class="phone phone-horizontal">
-          <img src="assets/img/Cam.png" alt="cam" />
-          <img src="assets/img/SpeakerH.png" alt="Speaker" />
-          <img src="assets/img/Layer 5.png" alt="Screen" />
-          <img src="assets/img/Home-Button.png" alt="Home-Button" />
+
+        <div class="slide" data-bgColor="#648bf0">
+          <img src="assets/img/slide_2.png" alt="slide-two">
         </div>
+
       </div>
-      <img class="arrowNext" src="assets/img/chevNext.png" alt="arrow next" />
+
+      <img class="arrowNext slider-arrow" src="assets/img/chevNext.png" alt="arrow next" />
     </div>
   </section>
+
+  <a id="services"></a>
   <section class="services">
     <div class="services-content container">
       <h2 class="services-title">Our Services</h2>
@@ -138,6 +173,8 @@
       </div>
     </div>
   </section>
+
+  <a id="portfolio"></a>
   <section class="portfolio">
     <div class="portfolio-content container">
       <h3 class="portfolio-title">portfolio</h3>
@@ -147,58 +184,60 @@
       </p>
       <ul class="portfolio-filter">
         <li>
-          <p>All</p>
+          <p class="filter-btn active-filter" data-type="all">All</p>
         </li>
         <li>
-          <p>Web Design</p>
+          <p class="filter-btn" data-type="web">Web Design</p>
         </li>
         <li>
-          <p>Graphic Design</p>
+          <p class="filter-btn" data-type="graphic">Graphic Design</p>
         </li>
         <li>
-          <p>Artwork</p>
+          <p class="filter-btn" data-type="art">Artwork</p>
         </li>
       </ul>
       <div class="portfolio-stock">
-        <div class="stock-item">
-          <img src="assets/img/portfolio/11.png" alt="portfolio image" />
+        <div class="stock-item" data-type="art">
+          <img src="assets/img/portfolio/11.png" alt="portfolio image" class="stock-item-img" />
         </div>
-        <div class="stock-item">
-          <img src="assets/img/portfolio/12.png" alt="portfolio image" />
+        <div class="stock-item" data-type="art">
+          <img src="assets/img/portfolio/12.png" alt="portfolio image" class="stock-item-img" />
         </div>
-        <div class="stock-item">
-          <img src="assets/img/portfolio/13.png" alt="portfolio image" />
+        <div class="stock-item" data-type="graphic">
+          <img src="assets/img/portfolio/13.png" alt="portfolio image" class="stock-item-img" />
         </div>
-        <div class="stock-item">
-          <img src="assets/img/portfolio/14.png" alt="portfolio image" />
+        <div class="stock-item" data-type="graphic">
+          <img src="assets/img/portfolio/14.png" alt="portfolio image" class="stock-item-img" />
         </div>
-        <div class="stock-item">
-          <img src="assets/img/portfolio/21.png" alt="portfolio image" />
+        <div class="stock-item" data-type="web">
+          <img src="assets/img/portfolio/21.png" alt="portfolio image" class="stock-item-img" />
         </div>
-        <div class="stock-item">
-          <img src="assets/img/portfolio/22.png" alt="portfolio image" />
+        <div class="stock-item" data-type="web">
+          <img src="assets/img/portfolio/22.png" alt="portfolio image" class="stock-item-img" />
         </div>
-        <div class="stock-item">
-          <img src="assets/img/portfolio/23.png" alt="portfolio image" />
+        <div class="stock-item" data-type="art">
+          <img src="assets/img/portfolio/23.png" alt="portfolio image" class="stock-item-img" />
         </div>
-        <div class="stock-item">
-          <img src="assets/img/portfolio/24.png" alt="portfolio image" />
+        <div class="stock-item" data-type="graphic">
+          <img src="assets/img/portfolio/24.png" alt="portfolio image" class="stock-item-img" />
         </div>
-        <div class="stock-item">
-          <img src="assets/img/portfolio/31.png" alt="portfolio image" />
+        <div class="stock-item" data-type="web">
+          <img src="assets/img/portfolio/31.png" alt="portfolio image" class="stock-item-img" />
         </div>
-        <div class="stock-item">
-          <img src="assets/img/portfolio/32.png" alt="portfolio image" />
+        <div class="stock-item" data-type="art">
+          <img src="assets/img/portfolio/32.png" alt="portfolio image" class="stock-item-img" />
         </div>
-        <div class="stock-item">
-          <img src="assets/img/portfolio/33.png" alt="portfolio image" />
+        <div class="stock-item" data-type="graphic">
+          <img src="assets/img/portfolio/33.png" alt="portfolio image" class="stock-item-img" />
         </div>
-        <div class="stock-item">
-          <img src="assets/img/portfolio/34.png" alt="portfolio image" />
+        <div class="stock-item" data-type="web">
+          <img src="assets/img/portfolio/34.png" alt="portfolio image" class="stock-item-img" />
         </div>
       </div>
     </div>
   </section>
+
+  <a id="about"></a>
   <section class="about">
     <div class="about-content container">
       <h3 class="about-title">About Us</h3>
@@ -449,6 +488,8 @@
       </div>
     </div>
   </section>
+
+  <a id="quote"></a>
   <section class="quote">
     <div class="quote-content container">
       <h3 class="quote-title">Get a Quote</h3>
@@ -456,10 +497,14 @@
         commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus
         commodo, tortor mauris condimentum nibh.</p>
       <div class="quote-form">
-        <form action="#" method="GET"><input type="text" name="name" placeholder="Name (Required)" required> <input
-            type="email" name="email" placeholder="Email (Required)" required> <input type="text" name="subject"
-            placeholder="Subject"> <textarea name="detail" placeholder="Describe your project in detail..."></textarea>
-          <button type="submit">SEND</button></form>
+        <form action="#" method="GET">
+          <input type="text" name="name" placeholder="Name (Required)" data-input required>
+          <input type="email" name="email" placeholder="Email (Required)" data-input required>
+          <input type="text" name="subject" placeholder="Subject" data-input data-subject='Без темы'>
+          <textarea name="detail" placeholder="Describe your project in detail..." data-input
+            data-description='Без описания'></textarea>
+          <button type="submit">SEND</button>
+        </form>
       </div>
       <div class="quote-contact">
         <h3>Contact Information</h3>
@@ -587,7 +632,15 @@
         </a></div>
     </div>
   </footer>
+  <div class="form-send">
+    <div class="form-send-wrap">
 
+      <p class="form-send-title">Письмо отправлено</p>
+      <p class="form-send-subject"></p>
+      <p class="form-send-description"></p>
+      <p class="form-send-close">OK</p>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
