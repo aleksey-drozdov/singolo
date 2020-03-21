@@ -36,6 +36,42 @@ window.addEventListener('load', () => {
         }, false);
     }
 
+    // смена активных кнопок при скролле 
+    window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 2465) {
+            for (let i = 0; i < menu.childElementCount; i++) {  //убираем активную кнопку
+                menu.children[i].children[0].classList.remove('active-link');
+            }
+            menu.children[4].children[0].classList.add('active-link');
+        }
+        if (window.pageYOffset < 2465 && window.pageYOffset > 1701) {
+            for (let i = 0; i < menu.childElementCount; i++) {  //убираем активную кнопку
+                menu.children[i].children[0].classList.remove('active-link');
+            }
+            menu.children[3].children[0].classList.add('active-link');
+        }
+        if (window.pageYOffset < 1701 && window.pageYOffset > 765) {
+            for (let i = 0; i < menu.childElementCount; i++) {  //убираем активную кнопку
+                menu.children[i].children[0].classList.remove('active-link');
+            }
+            menu.children[2].children[0].classList.add('active-link');
+        }
+        if (window.pageYOffset < 765 && window.pageYOffset > 100) {
+            for (let i = 0; i < menu.childElementCount; i++) {  //убираем активную кнопку
+                menu.children[i].children[0].classList.remove('active-link');
+            }
+            menu.children[1].children[0].classList.add('active-link');
+        }
+        if (window.pageYOffset < 100) {
+            for (let i = 0; i < menu.childElementCount; i++) {  //убираем активную кнопку
+                menu.children[i].children[0].classList.remove('active-link');
+            }
+            menu.children[0].children[0].classList.add('active-link');
+        }
+    })
+
+
+
 
     //портфолио
 
@@ -51,15 +87,21 @@ window.addEventListener('load', () => {
             portfolioFilter.children[i].children[0].classList.remove('active-filter');
         }
         e.target.classList.add('active-filter');
-        //смена картинок
-        for (let i = 0; i < portfolioStockItems.length; i++) {
-            if (portfolioStockItems[i].dataset.type == e.target.dataset.type) {
-                portfolioStockItems[i].style.order = '1';
-            } else {
-                portfolioStockItems[i].style.order = '2';
-            }
-        }
+        shuffleImg();
+
     })
+    //расставляем картинки в случайном порядке, не меняя структуры разметки
+    function shuffleImg() {
+        for (let i = 0; i < portfolioStockItems.length; i++) {
+            portfolioStockItems[i].remove()
+        }
+        var shuffleItems = portfolioStockItems.sort(function () {
+            return Math.random() - 0.5;
+        });
+        for (let i = 0; i < portfolioStockItems.length; i++) {
+            document.querySelector('.portfolio-stock').append(shuffleItems[i])
+        }
+    }
 
     //рамка на картинках портфолио
     let portfolioStock = document.querySelector('.portfolio-stock');
