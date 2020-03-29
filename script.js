@@ -37,36 +37,16 @@ window.addEventListener('load', () => {
     }
 
     // смена активных кнопок при скролле 
+    let windowHeigth = window.innerHeight
+    let anchors = Array.from(document.querySelectorAll('.anchor'));
     window.addEventListener('scroll', function () {
-        if (window.pageYOffset > 2465) {
-            for (let i = 0; i < menu.childElementCount; i++) {  //убираем активную кнопку
-                menu.children[i].children[0].classList.remove('active-link');
+        for (let i = 0; i < anchors.length; i++) {
+            if (anchors[i].getBoundingClientRect().top < windowHeigth * 0.3 && anchors[i].getBoundingClientRect().top >= 0) {
+                for (let j = 0; j < menu.childElementCount; j++) {  //убираем активную кнопку
+                    menu.children[j].children[0].classList.remove('active-link');
+                }
+                menu.children[i].children[0].classList.add('active-link'); //делаем активной кнопку, на которую нажали
             }
-            menu.children[4].children[0].classList.add('active-link');
-        }
-        if (window.pageYOffset < 2465 && window.pageYOffset > 1701) {
-            for (let i = 0; i < menu.childElementCount; i++) {  //убираем активную кнопку
-                menu.children[i].children[0].classList.remove('active-link');
-            }
-            menu.children[3].children[0].classList.add('active-link');
-        }
-        if (window.pageYOffset < 1701 && window.pageYOffset > 765) {
-            for (let i = 0; i < menu.childElementCount; i++) {  //убираем активную кнопку
-                menu.children[i].children[0].classList.remove('active-link');
-            }
-            menu.children[2].children[0].classList.add('active-link');
-        }
-        if (window.pageYOffset < 765 && window.pageYOffset > 100) {
-            for (let i = 0; i < menu.childElementCount; i++) {  //убираем активную кнопку
-                menu.children[i].children[0].classList.remove('active-link');
-            }
-            menu.children[1].children[0].classList.add('active-link');
-        }
-        if (window.pageYOffset < 100) {
-            for (let i = 0; i < menu.childElementCount; i++) {  //убираем активную кнопку
-                menu.children[i].children[0].classList.remove('active-link');
-            }
-            menu.children[0].children[0].classList.add('active-link');
         }
     })
 
@@ -95,7 +75,7 @@ window.addEventListener('load', () => {
         for (let i = 0; i < portfolioStockItems.length; i++) {
             portfolioStockItems[i].remove()
         }
-        var shuffleItems = portfolioStockItems.sort(function () {
+        let shuffleItems = portfolioStockItems.sort(function () {
             return Math.random() - 0.5;
         });
         for (let i = 0; i < portfolioStockItems.length; i++) {
@@ -186,8 +166,8 @@ window.addEventListener('load', () => {
     document.querySelector('form').addEventListener('submit', function (e) {
         e.preventDefault();
         //получаем значения инпутов
-        var subject = document.querySelector('[name=subject]').value.length == 0 ? document.querySelector('[name=subject]').dataset.subject : "Тема: " + document.querySelector('[name=subject]').value;
-        var description = document.querySelector('[name=detail]').value.length == 0 ? document.querySelector('[name=detail]').dataset.description : "Описание: " + document.querySelector('[name=detail]').value;
+        let subject = document.querySelector('[name=subject]').value.length == 0 ? document.querySelector('[name=subject]').dataset.subject : "Тема: " + document.querySelector('[name=subject]').value;
+        let description = document.querySelector('[name=detail]').value.length == 0 ? document.querySelector('[name=detail]').dataset.description : "Описание: " + document.querySelector('[name=detail]').value;
 
         document.querySelector('.form-send-subject').innerHTML = subject;
         document.querySelector('.form-send-description').innerHTML = description;
@@ -195,7 +175,7 @@ window.addEventListener('load', () => {
     })
     //закрытие диалогового окна и очистка инпутов
     document.querySelector('.form-send-close').addEventListener('click', function () {
-        var inputs = document.querySelectorAll('[data-input]');
+        let inputs = document.querySelectorAll('[data-input]');
         for (let i = 0; i < inputs.length; i++) {
             inputs[i].value = '';
         }
@@ -204,7 +184,17 @@ window.addEventListener('load', () => {
     })
 
 
-
+    //анимация меню для мобилок
+    if (window.innerWidth < 768) {
+        let burger = document.querySelector('.burger');
+        burger.addEventListener('click', menuAnimation);
+        for (let i = 0; i < linkNav.length; i++) {
+            linkNav[i].addEventListener('click', menuAnimation)
+        }
+        function menuAnimation() {
+            document.querySelector('.header-content').classList.toggle('menu-active')
+        }
+    }
 
 
 

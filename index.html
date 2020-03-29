@@ -11,6 +11,11 @@
 <body>
   <header>
     <section class="header-content container">
+      <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
       <div class="logo">
         <p>SINGOLO<span>*</span></p>
       </div>
@@ -26,7 +31,7 @@
     </section>
   </header>
 
-  <a id="slider"></a>
+  <a id="slider" class="anchor"></a>
   <section class="slider">
 
     <div class="slider-content container">
@@ -35,7 +40,7 @@
 
       <div class="slides">
 
-        <div class="slide active-slide" data-bgColor="#f06c64" style="justify-content: space-between;">
+        <div class="slide active-slide" data-bgColor="#f06c64" style="justify-content: center;">
           <div class="phone-box-vertical">
             <div class="phone phone-vertical">
               <div>
@@ -81,7 +86,7 @@
     </div>
   </section>
 
-  <a id="services"></a>
+  <a id="services" class="anchor"></a>
   <section class="services">
     <div class="services-content container">
       <h2 class="services-title">Our Services</h2>
@@ -92,89 +97,86 @@
         tortor mauris condimentum nibh.
       </p>
       <div class="services-wrapper">
-        <div class="services-column">
-          <div class="services-item">
-            <div class="services-item-icon">
-              <img src="assets/img/pen.png" alt="pen" />
-            </div>
-            <div class="services-item-info">
-              <p class="services-item-title">Custom Design</p>
-              <p class="services-item-description">
-                Curabitur vestibulum eget mauris quis laoreet. Phasellus in
-                quam laoreet, viverra lacus ut, ultrices velit.
-              </p>
-            </div>
+        <div class="services-item">
+          <div class="services-item-icon">
+            <img src="assets/img/pen.png" alt="pen" />
           </div>
-          <div class="services-item">
-            <div class="services-item-icon">
-              <img src="assets/img/phone.png" alt="phone" />
-            </div>
-            <div class="services-item-info">
-              <p class="services-item-title">Responsive Layout</p>
-              <p class="services-item-description">
-                Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas
-                blandit nunc ligula. Praesent elit leo.
-              </p>
-            </div>
+          <div class="services-item-info">
+            <p class="services-item-title">Custom Design</p>
+            <p class="services-item-description">
+              Curabitur vestibulum eget mauris quis laoreet. Phasellus in
+              quam laoreet, viverra lacus ut, ultrices velit.
+            </p>
           </div>
         </div>
-        <div class="services-column">
-          <div class="services-item">
-            <div class="services-item-icon">
-              <img src="assets/img/bulb.png" alt="bulb" />
-            </div>
-            <div class="services-item-info">
-              <p class="services-item-title">Inovative Ideas</p>
-              <p class="services-item-description">
-                Quisque luctus, quam eget molestie com- modo, lacus purus
-                cursus purus, nec rutrum tellus dolor id lorem.
-              </p>
-            </div>
+        <div class="services-item">
+          <div class="services-item-icon">
+            <img src="assets/img/bulb.png" alt="bulb" />
           </div>
-          <div class="services-item">
-            <div class="services-item-icon">
-              <img src="assets/img/bubble.png" alt="bubble" />
-            </div>
-            <div class="services-item-info">
-              <p class="services-item-title">24 / 7 Support</p>
-              <p class="services-item-description">
-                Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi.
-                Nulla a sem erat. Pellentesque egestas venenatis lorem .
-              </p>
-            </div>
+          <div class="services-item-info">
+            <p class="services-item-title">Inovative Ideas</p>
+            <p class="services-item-description">
+              Quisque luctus, quam eget molestie com- modo, lacus purus
+              cursus purus, nec rutrum tellus dolor id lorem.
+            </p>
           </div>
         </div>
-        <div class="services-column">
-          <div class="services-item">
-            <div class="services-item-icon">
-              <img src="assets/img/heart.png" alt="heart" />
-            </div>
-            <div class="services-item-info">
-              <p class="services-item-title">Love Is The Answer</p>
-              <p class="services-item-description">
-                Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet
-                turpis, et consequat felis. Quisque condimentum.
-              </p>
-            </div>
+        <div class="services-item">
+          <div class="services-item-icon">
+            <img src="assets/img/heart.png" alt="heart" />
           </div>
-          <div class="services-item">
-            <div class="services-item-icon">
-              <img src="assets/img/star.png" alt="star" />
-            </div>
-            <div class="services-item-info">
-              <p class="services-item-title">Feel Like A Star</p>
-              <p class="services-item-description">
-                Quisque hendrerit purus dapibus, ornare nibh vitae, viverra
-                nibh. Fusce vitae aliquam tellus.
-              </p>
-            </div>
+          <div class="services-item-info">
+            <p class="services-item-title">Love Is The Answer</p>
+            <p class="services-item-description">
+              Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet
+              turpis, et consequat felis. Quisque condimentum.
+            </p>
+          </div>
+        </div>
+        <div class="services-item">
+          <div class="services-item-icon">
+            <img src="assets/img/phone.png" alt="phone" />
+          </div>
+          <div class="services-item-info">
+            <p class="services-item-title">Responsive Layout</p>
+            <p class="services-item-description">
+              Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas
+              blandit nunc ligula. Praesent elit leo.
+            </p>
+          </div>
+        </div>
+
+
+        <div class="services-item">
+          <div class="services-item-icon">
+            <img src="assets/img/bubble.png" alt="bubble" />
+          </div>
+          <div class="services-item-info">
+            <p class="services-item-title">24 / 7 Support</p>
+            <p class="services-item-description">
+              Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi.
+              Nulla a sem erat. Pellentesque egestas venenatis lorem .
+            </p>
+          </div>
+        </div>
+
+        <div class="services-item">
+          <div class="services-item-icon">
+            <img src="assets/img/star.png" alt="star" />
+          </div>
+          <div class="services-item-info">
+            <p class="services-item-title">Feel Like A Star</p>
+            <p class="services-item-description">
+              Quisque hendrerit purus dapibus, ornare nibh vitae, viverra
+              nibh. Fusce vitae aliquam tellus.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <a id="portfolio"></a>
+  <a id="portfolio" class="anchor"></a>
   <section class="portfolio">
     <div class="portfolio-content container">
       <h3 class="portfolio-title">portfolio</h3>
@@ -237,7 +239,7 @@
     </div>
   </section>
 
-  <a id="about"></a>
+  <a id="about" class="anchor"></a>
   <section class="about">
     <div class="about-content container">
       <h3 class="about-title">About Us</h3>
@@ -489,7 +491,7 @@
     </div>
   </section>
 
-  <a id="quote"></a>
+  <a id="quote" class="anchor"></a>
   <section class="quote">
     <div class="quote-content container">
       <h3 class="quote-title">Get a Quote</h3>
