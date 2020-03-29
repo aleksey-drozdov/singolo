@@ -46,7 +46,7 @@ a:hover {
 /*-------burger------*/
 .burger{
   position: relative;
-  z-index: 10;
+  z-index: 11;
   width: 25px;
   height: 20px;
   display: none;
@@ -1252,6 +1252,7 @@ nav > ul a{
   transform: rotate(90deg);
 }
 .menu-active nav{
+  z-index: 10;
   left: 0;
   box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
 }
@@ -1260,6 +1261,7 @@ nav > ul a{
 }
 .menu-active .blackout{
   display: unset;
+  pointer-events: none;
   transition: all 0.3s ease;
   position: absolute;
   top: 0;
