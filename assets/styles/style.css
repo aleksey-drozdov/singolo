@@ -60,6 +60,9 @@ a:hover {
   border-radius: 5px;
   background-color: #fff;
 }
+.blackout{
+  display: none;
+}
 /* ----------header--------- */
 header {
   position: fixed;
@@ -1250,9 +1253,20 @@ nav > ul a{
 }
 .menu-active nav{
   left: 0;
+  box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
 }
 .menu-active .logo{
   left: 117px;
+}
+.menu-active .blackout{
+  display: unset;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(000, 000, 000, 0.3);
 }
 }
 @media screen and (max-width: 374px){
